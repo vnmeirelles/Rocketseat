@@ -1,10 +1,4 @@
 import { uuid } from 'uuidv4';
-import AppointmentsRepository from '../reposittories/AppointmentsRepository';
-
-interface AppointmentConstructor {
-  provider: string;
-  date: Date;
-}
 
 class Appointment {
   id: string;
