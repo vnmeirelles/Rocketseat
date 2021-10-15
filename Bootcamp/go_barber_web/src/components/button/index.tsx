@@ -4,12 +4,12 @@ import { Container } from './styles';
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
 
-const Button: React.FC<ButtonProps> = ({ children, ...rest }) => (
-  <Container>
-    <button type="button" {...rest}>
+const Button: React.FC<ButtonProps> = ({ children, ...rest }) => {
+  return (
+    <Container type="button" {...rest}>
       {children}
-    </button>
-  </Container>
-);
+    </Container>
+  );
+};
 
 export default Button;
