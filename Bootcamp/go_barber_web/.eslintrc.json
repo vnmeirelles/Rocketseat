@@ -46,7 +46,20 @@
           "ts": "never",
           "tsx": "never"
         }
-     ]
+     ],
+     "object-curly-newline": ["error", {
+      "ObjectExpression": "always",
+      "ObjectPattern": { "multiline": true },
+      "ImportDeclaration": "never",
+      "ExportDeclaration": { "multiline": true, "minProperties": 3 }
+  }],
+  "react/jsx-no-bind": [0, {
+    "ignoreDOMComponents":  false,
+    "ignoreRefs": false,
+    "allowArrowFunctions": false,
+    "allowFunctions": false,
+    "allowBind": false
+  }]
     },
     "settings": {
       "import/resolver": {
