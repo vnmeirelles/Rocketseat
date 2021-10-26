@@ -7,7 +7,7 @@ import logoImg from '../../assets/logo.svg';
 import { Container, Content, Background } from './styles';
 
 import Input from '../../components/Input';
-import Button from '../../components/button';
+import Button from '../../components/Button';
 import getValidationErrors from '../../utils/getValidationErrors';
 
 const SignUp: React.FC = () => {

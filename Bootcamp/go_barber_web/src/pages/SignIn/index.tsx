@@ -4,7 +4,7 @@ import logoImg from '../../assets/logo.svg';
 import { Container, Content, Background } from './styles';
 
 import Input from '../../components/Input';
-import Button from '../../components/button';
+import Button from '../../components/Button';
 
 const SignIn: React.FC = () => (
   <Container>
