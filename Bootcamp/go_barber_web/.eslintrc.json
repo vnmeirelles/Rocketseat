@@ -47,7 +47,7 @@
           "tsx": "never"
         }
      ],
-     "object-curly-newline": ["error", {
+     "object-curly-newline": ["off", {
       "ObjectExpression": "always",
       "ObjectPattern": { "multiline": true },
       "ImportDeclaration": "never",
