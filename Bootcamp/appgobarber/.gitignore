@@ -58,3 +58,6 @@ buck-out/
 
 # CocoaPods
 /ios/Pods/
+
+#Arquivos gerais
+/Bootcamp/base_new_react.zip
