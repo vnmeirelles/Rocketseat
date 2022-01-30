@@ -8,6 +8,8 @@ export const Container = styled(RectButton)`
   border-radius: 10px;
   margin-top: 8px;
 
+  flex-direction: row;
+  min-width: 100%; /*inserido após bug da utilização do unform*/
   justify-content: center;
   align-items: center;
 `;
