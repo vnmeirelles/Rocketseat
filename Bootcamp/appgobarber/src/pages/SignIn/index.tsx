@@ -7,7 +7,7 @@ import { Image,
          TextInput,
          Alert
        } from 'react-native';
-import {useNavigation} from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/Feather';
 import { Form } from '@unform/mobile';
 import { FormHandles } from '@unform/core';
@@ -55,11 +55,11 @@ const SignIn: React.FC = () => {
       //   password: data.password,
       // });
 
-      // history.push('/dashboard');
-
     } catch (err) {
       if (err instanceof Yup.ValidationError) {
         const errors = getValidationErrors(err);
+
+        // console.log(errors);
 
         formRef.current?.setErrors(errors);
 
@@ -89,7 +89,10 @@ const SignIn: React.FC = () => {
             <Image source={logoImg} />
             <View><Title>Faça seu logon</Title></View>
 
-            <Form ref={formRef} onSubmit={handleSignIn}>
+            <Form
+              ref={formRef}
+              onSubmit={handleSignIn}
+            >
               <Input
                 name="email"
                 icon="mail"
@@ -114,10 +117,10 @@ const SignIn: React.FC = () => {
                 }}
               />
 
-              <Button onPress={() => {formRef.current?.submitForm()}}>Entrar</Button>
+              <Button onPress={() => formRef.current?.submitForm()}>Entrar</Button>
             </Form>
 
-            <ForgotPassword onPress={() => {}} >
+            <ForgotPassword >
               <ForgotPasswordText>Esqueci minha Senha</ForgotPasswordText>
             </ForgotPassword>
 
@@ -125,7 +128,7 @@ const SignIn: React.FC = () => {
         </ScrollView>
 
       </KeyboardAvoidingView>
-      <CreateAccountButton onPress={() => navigation.navigate('SignUp')}>
+      <CreateAccountButton onPress={() => {navigation.navigate('SignUp' as any)}}>
         <Icon name="log-in" size={20} color="#ff9000" />
         <CreateAccountButtonText>Criar uma conta</CreateAccountButtonText>
       </CreateAccountButton>
